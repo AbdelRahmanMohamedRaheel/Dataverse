@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data from Users Table </title>
+    <style>
+        th {
+            font-size: 17px;
+        }
+
+        table {
+            width: 95%;
+            border-collapse: collapse;
+        
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #182b00;
+            text-align: left;
+        }
+
+        th {
+            background-color: #144700;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #cecb0ae3;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e9f357;
+        }
+
+        tr:hover {
+            background-color: #ff0000c5;
+        }
+        h1 {
+            color: blueviolet;
+            text-align: center;
+        }
+    </style>
+</head>
+    <body style="background-color:#ffff00c9;">
+
+<h1>Data from MySQL Table</h1>
+    <table>
+        <style></style>
+        <tr>
+            <th>Name : </th>
+            <th>Phone No. : </th>
+            <th>Password : </th>
+            <th>Address : </th>
+
+        </tr>
+    
+        <tbody>
+            {% for row in data %}
+            <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+                
+        </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

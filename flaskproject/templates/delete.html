@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      h1{
+         text-align: center;
+         color: blueviolet;
+      }
+      input[type="submit"] {
+            background-color: #2f13ad;
+            color: #ffffff;
+            padding: 0.09cm 0.8cm ;
+            cursor: default;
+        }
+        label{
+         font-size: 20px;
+        }
+   </style>
+    <title>Delete User</title>
+</head>
+<body style="background-color:#ffff00c9;">
+   <h1>Delete User</h1>
+    
+    <form method="POST" action="/delete">
+        <label for="phone_no">Phone Number:</label>
+        <input type="number" name="phone_no" id="phone_no" required>
+        <input type="submit" value="Delete">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <p><a href="/">Back to Homepage</a></p>
+    <p><a href="/showusers">Show Users</a></p>
+</body>
+</html>
+
+
+
+
+
+
+

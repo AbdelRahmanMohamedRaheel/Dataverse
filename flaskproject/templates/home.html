@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+        h1{
+            color:blueviolet;
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: #2f13ad;
+            color: #ffffff;
+            padding: 0.3cm 1cm ;
+            cursor: default;
+        }
+        
+</style>
+
+    <title>Welcome to My First App</title>
+</head>
+<body style="background-color: #ffff00c9;">
+    <h1>Welcome</h1>
+     
+    <div class="container">
+        <h3>Add User</h3>
+        <form action="/adduser" method="GET">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
+    <div class="container">
+        <h3>Show Users</h3>
+        <form action="/showusers" method="get">
+            <input type="submit" value="Show">
+        </form>
+    </div>
+
+    <div class="container">
+        <h3>Delete User</h3>
+        <form action="/delete" method="post">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+</body>
+</html>
